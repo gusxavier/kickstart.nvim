@@ -4,6 +4,42 @@
 -- See the kickstart.nvim README for more information
 return {
   {
+    'nvim-neotest/neotest',
+    dependencies = {
+      'nvim-neotest/nvim-nio',
+      'nvim-lua/plenary.nvim',
+      'antoinemadec/FixCursorHold.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-neotest/neotest-go',
+    },
+    ft = { 'go' },
+    config = function()
+      require('neotest').setup {
+        adapters = {
+          require 'neotest-go',
+        },
+      }
+    end,
+    keys = {
+      {
+        '<localleader>tc',
+        function()
+          require('neotest').run.run()
+        end,
+        mode = '',
+        desc = 'Run current [T]est',
+      },
+      {
+        '<localleader>tf',
+        function()
+          require('neotest').run.run(vim.fn.expand '%')
+        end,
+        mode = '',
+        desc = 'Run [T]est [F]ile',
+      },
+    },
+  },
+  {
     'NeogitOrg/neogit',
     branch = 'nightly',
     dependencies = {
