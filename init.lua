@@ -581,6 +581,8 @@ require('lazy').setup({
           single_file_support = true,
         },
 
+        jsonls = {},
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes = { ...},
