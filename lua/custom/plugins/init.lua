@@ -26,7 +26,6 @@ return {
         function()
           require('neotest').run.run()
         end,
-        mode = '',
         desc = 'Run current [T]est',
       },
       {
@@ -34,7 +33,6 @@ return {
         function()
           require('neotest').run.run(vim.fn.expand '%')
         end,
-        mode = '',
         desc = 'Run [T]est [F]ile',
       },
     },
