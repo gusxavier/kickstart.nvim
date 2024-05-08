@@ -4,28 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
   {
-    'folke/trouble.nvim',
-    branch = 'dev',
-    opts = {},
-    keys = {
-      {
-        '<leader>xx',
-        '<cmd>Trouble diagnostics toggle focus=true<cr>',
-        desc = 'Diagnostics (Trouble)',
-      },
-      {
-        '<leader>xb',
-        '<cmd>Trouble diagnostics toggle filter.buf=0 focus=true<cr>',
-        desc = 'Buffer Diagnostics (Trouble)',
-      },
-      {
-        '<leader>xq',
-        '<cmd>Trouble qflist toggle focus=true<cr>',
-        desc = 'Quickfix List (Trouble)',
-      },
-    },
-  },
-  {
     'nvim-neotest/neotest',
     dependencies = {
       'nvim-neotest/nvim-nio',
